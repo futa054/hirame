@@ -11,4 +11,7 @@ class PlayerService(
             playerRepository.findOneByNum(num)?.let {
                 it
             }
+    fun create(player: Player) = playerRepository.create(player)
+    fun update(player: Player) = playerRepository.update(player.copy())
+    fun delete(number: Int) = playerRepository.delete(number)
 }
